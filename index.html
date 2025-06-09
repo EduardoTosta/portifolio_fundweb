@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Projeto Portifólio do Eduardo, Desenvolvedor Web Full-Stack"
+    />
+    <meta name="author" content="Eduardo Tosta" />
+    <meta
+      name="keywords"
+      content="potifólio, desenvolvedor, web, fullstack, Eduardo Tosta, HTML, CSS, JavaScript"
+    />
+
+    <link rel="icon" href="assets/img/favicon.svg" />
+    <title>Portifólio do Eduardo</title>
+  </head>
+  <body>
+    <!-- Cabeçalho da página-->
+    <header>
+      <div id="header_content">
+        <!-- Título do cabeçalho -->
+        <div id="titulo">
+          <a href="#">Universo</a>
+        </div>
+
+        <!-- Menu -->
+        <div id="menu">
+          <!-- Barra de navegação -->
+          <nav>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#about">Sobre</a></li>
+              <li><a href="#contact">Contatos</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Seção principal da página -->
+    <main>
+      <!-- Seção Home -->
+      <section id="home">
+        <article id="home_texto">
+          <h4>Bem-Vindo ao Novo Universo</h4>
+          <h1>Mundos diferentes para pessoas diferentes</h1>
+          <p>
+            Mussum Ipsum, cacilds vidis litro abertis. Manduma pindureta quium
+            dia nois paga. Quem num gosta di mim que vai caçá sua turmis! Nullam
+            volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non
+            consequat odio. Todo mundo vê os porris que eu tomo, mas ninguém vê
+            os tombis que eu levo!
+          </p>
+          <a href="https://github.com/EduardoTosta" target="_blank"></a>
+        </article>
+
+        <article id="home_imagem">
+          <img
+            src="assets/img/astronauta.svg"
+            alt="Capacete de astronauta, com animação"
+          />
+        </article>
+      </section>
+
+      <!-- Seção Sobre -->
+      <section id="about">
+        <img src="assets/img/user_01.svg" alt="Foto do perfil do github" />
+        <article id="about_texto">
+          <p>
+            Mussum Ipsum, cacilds vidis litro abertis. Segunda-feiris nun dá, eu
+            vô me pirulitá! Suco de cevadiss deixa as pessoas mais
+            interessantis. Delegadis gente finis, bibendum egestas augue arcu ut
+            est. Morbi viverra placerat justo, vel pharetra turpis.
+          </p>
+
+          <div id="about_github">
+            <a href="https://github.com/EduardoTosta" target="_blank">Github</a>
+            <p>200 seguidores</p>
+            <p>20 repositorios</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- Seção de Contatos -->
+      <section id="contact">
+        <h4>Contate-me</h4>
+        <p>
+          Mussum Ipsum, cacilds vidis litro abertis. Admodum accumsan
+          disputationi eu sit. Vide electram sadipscing et per. Viva Forevis
+          aptent taciti sociosqu ad litora torquent. Diuretics paradis num copo
+          é motivis de denguis. Vehicula non. Ut sed ex eros. Vivamus sit amet
+          nibh non tellus tristique interdum.
+        </p>
+
+        <div id="icones_redes_sociais">
+          <a href="https://www.linkedin.com/in/eduardotosta-/" target="_blank">
+            <img src="assets/img/linkedin.svg" alt="Ícone do LinkedIn" />
+          </a>
+          <a href="https://github.com/EduardoTosta" target="_blank">
+            <img src="assets/img/github.svg" alt="Ícone do GitHub" />
+          </a>
+          <a href="https://www.instagram.com/edu_tosta001/" target="_blank">
+            <img src="assets/img/instagram.svg" alt="Ícone do Instagram" />
+          </a>
+        </div>
+
+        <form action="" method="POST">
+          <label for="nome">Nome</label>
+          <input
+            id="nome"
+            name="nome"
+            type="text"
+            placeholder="Digite seu nome"
+          />
+          <span id="txtNome"></span>
+
+          <label for="email">E-mail</label>
+          <input
+            id="email"
+            name="email"
+            type="text"
+            placeholder="Digite um endereço de email válido"
+          />
+          <span id="txtEmail"></span>
+
+          <label for="assunto">Assunto</label>
+          <input
+            id="assunto"
+            name="assunto"
+            type="text"
+            placeholder="Digite o assunto"
+          />
+          <span id="txtAssunto"></span>
+
+          <label for="mensagem">Mensagem</label>
+          <textarea
+            name="mensagem"
+            id="mensagem"
+            placeholder="Digite sua mensagem"
+          >
+          </textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer>Feito com &hearts; por Eduardo Tosta - 2025</footer>
+  </body>
+</html>
