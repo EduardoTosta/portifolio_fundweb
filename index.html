@@ -12,24 +12,29 @@
       name="keywords"
       content="potifólio, desenvolvedor, web, fullstack, Eduardo Tosta, HTML, CSS, JavaScript"
     />
-
     <link rel="icon" href="assets/img/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
     <title>Portifólio do Eduardo</title>
   </head>
   <body>
     <!-- Cabeçalho da página-->
-    <header>
-      <div id="header_content">
+    <header class="flex menu_container">
+      <div id="header_content" class="menu_content">
         <!-- Título do cabeçalho -->
         <div id="titulo">
           <a href="#">Universo</a>
         </div>
 
         <!-- Menu -->
-        <div id="menu">
+        <div id="menu" class="flex">
           <!-- Barra de navegação -->
           <nav>
-            <ul>
+            <ul class="flex menu_list">
               <li><a href="#">Home</a></li>
               <li><a href="#about">Sobre</a></li>
               <li><a href="#contact">Contatos</a></li>
@@ -42,8 +47,8 @@
     <!-- Seção principal da página -->
     <main>
       <!-- Seção Home -->
-      <section id="home">
-        <article id="home_texto">
+      <section id="home" class="flex home_container">
+        <article id="home_texto" class="flex home_content">
           <h4>Bem-Vindo ao Novo Universo</h4>
           <h1>Mundos diferentes para pessoas diferentes</h1>
           <p>
@@ -53,10 +58,15 @@
             consequat odio. Todo mundo vê os porris que eu tomo, mas ninguém vê
             os tombis que eu levo!
           </p>
-          <a href="https://github.com/EduardoTosta" target="_blank"></a>
+          <a
+            href="https://github.com/EduardoTosta"
+            target="_blank"
+            class="botao"
+            >Explorar</a
+          >
         </article>
 
-        <article id="home_imagem">
+        <article id="home_imagem" class="flex home_content">
           <img
             src="assets/img/astronauta.svg"
             alt="Capacete de astronauta, com animação"
@@ -76,7 +86,12 @@
           </p>
 
           <div id="about_github">
-            <a href="https://github.com/EduardoTosta" target="_blank">Github</a>
+            <a
+              href="https://github.com/EduardoTosta"
+              target="_blank"
+              class="botao"
+              >Github</a
+            >
             <p>200 seguidores</p>
             <p>20 repositorios</p>
           </div>
@@ -141,7 +156,7 @@
             placeholder="Digite sua mensagem"
           >
           </textarea>
-          <button type="submit">Enviar</button>
+          <button class="botao" type="submit">Enviar</button>
         </form>
       </section>
     </main>

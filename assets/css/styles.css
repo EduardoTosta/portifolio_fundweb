@@ -1,0 +1,153 @@
+/* Resetar configurações de navegação */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 400;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Variáveis de Cores */
+
+:root {
+  --purple-200: #9a7bd1;
+  --purple-500: #6b36c8;
+  --purple-800: #441f88;
+  --gray-200: #cccccc;
+  --gray-400: #505861;
+  --black-800: #171717;
+  --white: #f9f9f9;
+}
+
+html {
+  width: 100%;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--gray-200);
+  color: var(--black-800);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+.botao {
+  padding: 0.5rem 2rem;
+  border: 1px solid var(--purple-800);
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--purple-800);
+  background-color: none;
+}
+
+.botao:hover {
+  color: var(--white);
+  background-color: var(--purple-800);
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header */
+
+.menu_container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  background-color: var(--purple-800);
+  border-bottom: 1px solid var(--purple-500);
+  filter: opacity(0.9);
+  z-index: 1000;
+}
+
+.menu_container a {
+  font-weight: 700;
+  color: var(--white);
+}
+.menu_container a:hover {
+  color: var(--purple-200);
+}
+
+.menu_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 1120px;
+  padding: 0 1.5rem;
+}
+
+.menu_list {
+  display: flex;
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu_list li {
+  margin-left: 1rem;
+}
+
+.menu_list a {
+  display: block;
+  padding: 0.5rem;
+}
+
+/* Home */
+
+.home_container {
+  height: calc(100vh - 6.25rem);
+  max-width: 1120px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+}
+
+.home_container p,
+h1,
+h4 {
+  text-align: center;
+}
+
+.home_container h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 3rem;
+}
+
+.home_container h4 {
+  font-weight: 700;
+}
+
+.home_container p {
+  margin: 1rem 0;
+}
+
+.home_container .botao {
+  width: 40;
+}
+
+.home_content {
+  flex-direction: column;
+  width: 50vw;
+}
+
+.home_content img {
+  width: 75%;
+}
