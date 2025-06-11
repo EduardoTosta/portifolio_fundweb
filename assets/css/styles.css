@@ -208,15 +208,6 @@ h4 {
   color: var(--gray-400);
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 1rem 0;
-  background-color: var(--purple-800);
-  color: var(--white);
-  font-weight: 600;
-}
-
 /*  Success */
 .home_success_container {
   height: calc(100vh - 6.25rem);
@@ -249,4 +240,161 @@ footer {
 .home_success_container .botao {
   width: 40;
   gap: 1rem;
+}
+
+/* Contato */
+
+.contato_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  max-width: 1120px;
+  margin: 4rem auto 2rem;
+  padding: 0 2rem;
+}
+
+.contato_container h4 {
+  margin: 1rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.contato_content {
+  flex-direction: column;
+  margin: 4rem 0 0 0;
+  font-size: 1.25rem;
+}
+
+.contato_content p {
+  display: block;
+  text-align: justify;
+}
+
+.social_container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem 0 0 0;
+}
+
+.social_icon {
+  width: 4.75rem;
+  height: 4.75rem;
+}
+
+.social_icon:hover {
+  filter: brightness(0) saturate(100%) invert(20%) sepia(24%) saturate(4557%)
+    hue-rotate(242deg) brightness(89%) contrast(108%);
+}
+
+/* Formulário */
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 7rem 0 0 0;
+  padding: 1.25rem;
+}
+
+form label {
+  font-size: 1.25rem;
+  text-align: left;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin: 0.5rem 0 1rem;
+  padding: 0.5rem;
+  border-radius: 1.25rem;
+  border: none;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: none;
+}
+
+form span {
+  margin-bottom: 0.5rem;
+  margin-left: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  color: red;
+}
+
+/* Responsividade Movile */
+@media screen and (max-width: 960px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  main {
+    flex: 1;
+    flex-direction: column;
+  }
+
+  footer {
+    margin-top: auto;
+  }
+
+  .home_container {
+    flex-direction: column-reverse;
+    gap: 0;
+    height: auto;
+    margin-top: 0;
+    padding: 1rem;
+  }
+
+  .home_content {
+    width: 100%;
+    margin: 0;
+  }
+
+  .home_content .botao {
+    width: 60%;
+    margin-top: 1rem;
+  }
+
+  .about_section {
+    flex-direction: column;
+    height: auto;
+    margin: 1rem auto;
+    padding: 2rem 1 rem;
+  }
+
+  .about_img {
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .contato_container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1rem auto;
+    padding: 0 1rem;
+  }
+
+  .contato_content {
+    margin: 1rem 0 0 0;
+  }
+
+  .social_container {
+    margin: 1rem 0 0 0;
+  }
+
+  form {
+    margin: 1rem 0 0 0;
+    padding: 1rem;
+  }
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: var(--purple-800);
+  color: var(--white);
+  font-weight: 600;
 }
