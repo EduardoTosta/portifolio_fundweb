@@ -2,7 +2,8 @@ const sobre = document.querySelector("#about");
 
 const formulario = document.querySelector("#formulario");
 
-const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 
 async function getApiGithub() {
   try {
