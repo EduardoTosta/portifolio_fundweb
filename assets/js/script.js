@@ -22,8 +22,7 @@ async function getApiGitHub() {
             <!-- Texto da seção Sobre -->
             <article id="about_texto">
                 <h1>Sobre mim</h1>
-                <p>Bacon ipsum dolor sit amet jerky tongue kielbasa, doner ham hock ribeye swine leberkas sirloin filet mignon tail meatball hamburger. Bresaola ground round kielbasa, beef ribs beef brisket pancetta pork chop jowl ball tip corned beef</p>
-
+                <p>${perfil.bio}</p>
                 <div id="about_github" class="flex sobre_github">
                     <a href="${perfil.html_url}" target="_blank" class="botao">Github</a>
                     <p>${perfil.followers} Seguidores</p>
