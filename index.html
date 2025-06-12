@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <!-- Servidores de Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Fonte do Google - Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Projeto Portifólio do Eduardo, Desenvolvedor Web Full-Stack"
+      content="Projeto Portfólio do Rafael, desenvolvedor web fullstack."
     />
-    <meta name="author" content="Eduardo Tosta" />
+    <meta name="author" content="Rafael Queiróz" />
     <meta
       name="keywords"
-      content="potifólio, desenvolvedor, web, fullstack, Eduardo Tosta, HTML, CSS, JavaScript"
+      content="portfólio, desenvolvedor, web, fullstack, Rafael Queiróz, HTML, CSS, JavaScript"
     />
-    <link rel="icon" href="assets/img/favicon.svg" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" href="./assets/img/favicon.svg" />
 
-    <title>Portifólio do Eduardo</title>
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <title>Portfólio do Rafael</title>
   </head>
+
   <body>
-    <!-- Cabeçalho da página-->
+    <!-- Cabeçalho da página -->
     <header class="flex menu_container">
       <div id="header_content" class="menu_content">
         <!-- Título do cabeçalho -->
@@ -32,7 +41,7 @@
 
         <!-- Menu -->
         <div id="menu" class="flex">
-          <!-- Barra de navegação -->
+          <!-- Barra de Navegação -->
           <nav>
             <ul class="flex menu_list">
               <li><a href="#">Home</a></li>
@@ -48,105 +57,91 @@
     <main>
       <!-- Seção Home -->
       <section id="home" class="flex home_container">
+        <!-- Texto da seção Home -->
         <article id="home_texto" class="flex home_content">
-          <h4>Bem-Vindo ao Novo Universo</h4>
+          <h4>Bem-vindo ao Novo Universo</h4>
           <h1>Mundos diferentes para pessoas diferentes</h1>
           <p>
-            Mussum Ipsum, cacilds vidis litro abertis. Manduma pindureta quium
-            dia nois paga. Quem num gosta di mim que vai caçá sua turmis! Nullam
-            volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non
-            consequat odio. Todo mundo vê os porris que eu tomo, mas ninguém vê
-            os tombis que eu levo!
+            Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus
+            quis, vehicula ac nisi. Quem manda na minha terra sou euzis! A ordem
+            dos tratores não altera o pão duris. Copo furadis é disculpa de
+            bebadis, arcu quam euismod magna.
           </p>
-          <a
-            href="https://github.com/EduardoTosta"
-            target="_blank"
-            class="botao"
+          <a href="https://github.com/rafaelq80" target="_blank" class="botao"
             >Explorar</a
           >
         </article>
 
+        <!-- Imagem da seção  Home -->
         <article id="home_imagem" class="flex home_content">
           <img
-            src="assets/img/astronauta.svg"
-            alt="Capacete de astronauta, com animação"
+            src="./assets/img/astronauta.svg"
+            alt="Capacete do astronauta com animação"
           />
         </article>
       </section>
 
       <!-- Seção Sobre -->
-      <section id="about" class="flex about_section">
-        <article id="about_imagem" class="flex about_img">
-          <img src="assets/img/user_01.svg" alt="Foto do perfil do github" />
-        </article>
-
-        <article id="about_texto" class="flex about_text">
-          <h1>Sobre Mim</h1>
-          <p>
-            Mussum Ipsum, cacilds vidis litro abertis. Pellentesque nec nulla
-            ligula. Donec gravida turpis a vulputate ultricies. Atirei o pau no
-            gatis, per gatis num morreus. Delegadis gente finis, bibendum
-            egestas augue arcu ut est. A ordem dos tratores não altera o pão
-            duris.
-          </p>
-
-          <div id="about_github" class="flex about_github">
-            <a
-              href="https://github.com/EduardoTosta"
-              target="_blank"
-              class="botao"
-              >Github</a
-            >
-            <p>200 seguidores</p>
-            <p>20 repositórios</p>
-          </div>
-        </article>
-      </section>
+      <section id="about" class="flex sobre_container"></section>
 
       <!-- Seção de Contatos -->
       <section id="contact" class="contato_container">
         <article id="redes_sociais" class="contato_content">
           <h4>Contate-me</h4>
           <p>
-            Mussum Ipsum, cacilds vidis litro abertis. Admodum accumsan
-            disputationi eu sit. Vide electram sadipscing et per. Viva Forevis
-            aptent taciti sociosqu ad litora torquent. Diuretics paradis num
-            copo é motivis de denguis. Vehicula non. Ut sed ex eros. Vivamus sit
-            amet nibh non tellus tristique interdum.
+            Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus
+            quis, vehicula ac nisi. Quem manda na minha terra sou euzis! A ordem
+            dos tratores não altera o pão duris. Copo furadis é disculpa de
+            bebadis, arcu quam euismod magna.
           </p>
 
+          <!-- Redes Sociais -->
           <div id="icones_redes_sociais" class="social_container">
             <a
               href="https://www.linkedin.com/in/eduardotosta-/"
               target="_blank"
               class="social_icon"
             >
-              <img src="assets/img/linkedin.svg" alt="Ícone do LinkedIn" />
+              <img src="./assets/img/linkedin.svg" alt="Ícone do LinkedIn" />
             </a>
-            <a
-              href="https://github.com/EduardoTosta"
-              target="_blank"
-              class="social_icon"
-            >
-              <img src="assets/img/github.svg" alt="Ícone do GitHub" />
-            </a>
+
             <a
               href="https://www.instagram.com/edu_tosta001/"
               target="_blank"
               class="social_icon"
             >
-              <img src="assets/img/instagram.svg" alt="Ícone do Instagram" />
+              <img src="./assets/img/github.svg" alt="Ícone do GitHub" />
+            </a>
+
+            <a
+              href="https://github.com/EduardoTosta"
+              target="_blank"
+              class="social_icon"
+            >
+              <img src="./assets/img/instagram.svg" alt="Ícone do Instagram" />
             </a>
           </div>
         </article>
 
-        <form action="" method="POST">
+        <!-- Formulário de Contato -->
+        <form
+          action="https://formsubmit.co/7065d88cfa92a310a1da3b7a5effb0c9"
+          method="POST"
+          id="formulario"
+        >
+          <input
+            type="hidden"
+            name="_next"
+            value="http://127.0.0.1:5500/sucess.html"
+          />
+          <input type="hidden" name="_captcha" value="false" />
+
           <label for="nome">Nome</label>
           <input
             id="nome"
             name="nome"
             type="text"
-            placeholder="Digite seu nome"
+            placeholder="Digite o seu nome"
           />
           <span id="txtNome"></span>
 
@@ -155,7 +150,7 @@
             id="email"
             name="email"
             type="text"
-            placeholder="Digite um endereço de email válido"
+            placeholder="Digite um endereço de e-mail válido"
           />
           <span id="txtEmail"></span>
 
@@ -169,18 +164,23 @@
           <span id="txtAssunto"></span>
 
           <label for="mensagem">Mensagem</label>
+
           <textarea
-            name="mensagem"
             id="mensagem"
-            placeholder="Digite sua mensagem"
+            name="mensagem"
+            placeholder="Digite a sua mensagem"
           >
           </textarea>
+
           <button class="botao" type="submit">Enviar</button>
         </form>
       </section>
     </main>
 
     <!-- Rodapé da página -->
-    <footer>Feito com &hearts; por Eduardo Tosta - 2025</footer>
+    <footer>Feito com ❤ por Rafael Queiróz - 2025</footer>
+
+    <!-- Script JavaScript -->
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
