@@ -54,7 +54,6 @@ formulario.addEventListener("submit", function (event) {
 
   const campoEmail = document.querySelector("#email");
   const txtEmail = document.querySelector("#txtEmail");
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (!campoEmail.value.match(emailRegex)) {
     txtEmail.innerHTML = "Digite um e-mail válido";
