@@ -4,7 +4,6 @@ const formulario = document.querySelector("#formulario");
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-
 async function getApiGithub() {
   try {
     // Enviar uma Requisição HTTP para a API do Github
@@ -42,43 +41,36 @@ async function getApiGithub() {
 }
 
 formulario.addEventListener("submit", function (event) {
-  event.preventDefault();
-
-  const campoNome = document.querySelector("#nome");
-  const txtNome = document.querySelector("#txtNome");
+  let valido = true;
 
   if (campoNome.value.length < 3) {
     txtNome.innerHTML = "O Nome deve ter no mínimo 3 caracteres";
     campoNome.focus();
-    return;
+    valido = false;
   } else {
     txtNome.innerHTML = "";
   }
 
-  const campoEmail = document.querySelector("#email");
-  const txtEmail = document.querySelector("#txtEmail");
-
   if (!campoEmail.value.match(emailRegex)) {
     txtEmail.innerHTML = "Digite um e-mail válido";
     campoEmail.focus();
-    return;
+    valido = false;
   } else {
     txtEmail.innerHTML = "";
   }
 
-  const campoAssunto = document.querySelector("#assunto");
-  const txtAssunto = document.querySelector("#txtAssunto");
-
   if (campoAssunto.value.length < 5) {
     txtAssunto.innerHTML = "O Assunto deve ter no mínimo 5 caracteres";
     campoAssunto.focus();
-    return;
+    valido = false;
   } else {
     txtAssunto.innerHTML = "";
   }
 
-  // Enviar o e-mail
-  formulario.submit();
+  if (!valido) {
+    event.preventDefault(); // impede o envio somente se há erro
+  }
+  // se todos os campos forem válidos, o formulário será enviado normalmente e o FormSubmit vai redirecionar para success.html
 });
 
 getApiGithub();
