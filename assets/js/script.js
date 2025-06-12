@@ -2,37 +2,35 @@ const sobre = document.querySelector("#about");
 
 const formulario = document.querySelector("#formulario");
 
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-async function getApiGithub() {
+async function getApiGitHub() {
   try {
-    // Enviar uma Requisição HTTP para a API do Github
+    // Enviar uma requisição HTTP para API do GitHub
     const dadosPerfil = await fetch(
       `https://api.github.com/users/EduardoTosta`
     );
 
-    // Converte a Resposta HTTP para o formato JSON
+    // Converte a Resposta HTPP para o formato JSON
     const perfil = await dadosPerfil.json();
 
     // Criando o conteúdo da Seção about
-    let conteudo = `
-    
-            <!-- Imagem da seção Sobre -->
+    let conteudo = `  
+          <!-- Imagem da seção Sobre -->
             <img src="${perfil.avatar_url}" alt="Foto do perfil do Github - ${perfil.name}" />
 
             <!-- Texto da seção Sobre -->
             <article id="about_texto">
                 <h1>Sobre mim</h1>
-                <p>${perfil.bio}</p>
+                <p>Bacon ipsum dolor sit amet jerky tongue kielbasa, doner ham hock ribeye swine leberkas sirloin filet mignon tail meatball hamburger. Bresaola ground round kielbasa, beef ribs beef brisket pancetta pork chop jowl ball tip corned beef</p>
 
                 <div id="about_github" class="flex sobre_github">
                     <a href="${perfil.html_url}" target="_blank" class="botao">Github</a>
-                    <p>${perfil.followers} seguidores</p>
-                    <p>${perfil.public_repos} repositórios</p>
+                    <p>${perfil.followers} Seguidores</p>
+                    <p>${perfil.public_repos} Repositórios</p>
                 </div>
-            </article>
-            
-    `;
+             </article>
+  `;
     // Adicionar o conteúdo na página index.html, na Seção about
     sobre.innerHTML += conteudo;
   } catch (error) {
@@ -41,36 +39,44 @@ async function getApiGithub() {
 }
 
 formulario.addEventListener("submit", function (event) {
-  let valido = true;
+  event.preventDefault();
+
+  const campoNome = document.querySelector("#nome");
+  const txtNome = document.querySelector("#txtNome");
 
   if (campoNome.value.length < 3) {
     txtNome.innerHTML = "O Nome deve ter no mínimo 3 caracteres";
     campoNome.focus();
-    valido = false;
+    return;
   } else {
     txtNome.innerHTML = "";
   }
 
+  const campoEmail = document.querySelector("#email");
+  const txtEmail = document.querySelector("#txtEmail");
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   if (!campoEmail.value.match(emailRegex)) {
     txtEmail.innerHTML = "Digite um e-mail válido";
     campoEmail.focus();
-    valido = false;
+    return;
   } else {
     txtEmail.innerHTML = "";
   }
 
+  const campoAssunto = document.querySelector("#assunto");
+  const txtAssunto = document.querySelector("#txtAssunto");
+
   if (campoAssunto.value.length < 5) {
-    txtAssunto.innerHTML = "O Assunto deve ter no mínimo 5 caracteres";
+    txtAssunto.innerHTML = "O assunto deve ter no mínimo 5 caracteres";
     campoAssunto.focus();
-    valido = false;
+    return;
   } else {
     txtAssunto.innerHTML = "";
   }
 
-  if (!valido) {
-    event.preventDefault(); // impede o envio somente se há erro
-  }
-  // se todos os campos forem válidos, o formulário será enviado normalmente e o FormSubmit vai redirecionar para success.html
+  // Enviar o e-mail
+  formulario.submit();
 });
 
-getApiGithub();
+getApiGitHub();
